@@ -7,7 +7,7 @@
   --color-primary-dark: #821334;     /* Darker Crimson for Hovers */
   --color-accent-pink: #FDF0F3;      /* Very Light Pink Backgrounds */
   --color-accent-badge: #FAD6DF;     /* Soft Pill Badge Background */
-  
+
   /* Text & Neutral Colors */
   --color-text-main: #3B3B3B;        /* Body Dark Charcoal */
   --color-text-muted: #666666;       /* Subtitle / Muted Grey */
@@ -32,7 +32,7 @@
 }
 
 /* ==========================================================================
-   2. RESET & GLOBAL STYLES
+   2. RESET & GLOBAL BASE STYLES
    ========================================================================== */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -68,99 +68,56 @@ strong, b {
   font-weight: 700;
 }
 
+/* Base Links */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 /* ==========================================================================
-   3. SHARED COMPONENTS (BADGES, BANNERS, & CARDS)
+   3. BUTTONS & INTERACTIVE ELEMENTS
    ========================================================================== */
-/* Section Header Banner (e.g., THE ACADEMY) */
-.section-banner {
-  background-color: var(--color-accent-pink);
-  color: var(--color-primary);
-  border-radius: var(--radius-md);
-  padding: 16px 28px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 36px 0 24px 0;
-}
-
-.section-banner h2 {
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  font-size: 1.5rem;
-}
-
-/* Pill Badges (e.g., MISSION, VISION) */
-.badge-pill {
+.btn,
+.btn-primary,
+.btn-secondary,
+.nav-links a,
+.nav-quiz {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  background-color: var(--color-accent-badge);
-  color: var(--color-primary);
-  padding: 6px 20px;
-  border-radius: var(--radius-pill);
-  font-weight: 700;
-  font-size: 0.875rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-/* Grid Layouts */
-.grid-2 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 32px;
-}
-
-.grid-3 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-}
-
-/* Light Card Container */
-.card-light {
-  background-color: var(--color-bg-card);
-  border: 2px solid var(--color-accent-pink);
-  border-radius: var(--radius-lg);
-  padding: 32px;
-  box-shadow: var(--shadow-subtle);
-}
-
-/* Deep Crimson Card (Learn, Discover, Act) */
-.card-crimson {
+  justify-content: center;
   background-color: var(--color-primary);
   color: var(--color-text-white);
-  border-radius: var(--radius-md);
-  padding: 28px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  box-shadow: var(--shadow-card);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.card-crimson:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 28px rgba(163, 28, 68, 0.28);
-}
-
-.card-crimson h3 {
-  color: var(--color-text-white);
-  font-size: 1.35rem;
-}
-
-.card-crimson p {
-  color: rgba(255, 255, 255, 0.92);
+  padding: 10px 20px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
   font-size: 0.95rem;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
-.card-crimson strong {
+.btn:hover,
+.btn-primary:hover,
+.btn-secondary:hover,
+.nav-links a:hover,
+.nav-quiz:hover {
+  background-color: var(--color-primary-dark);
   color: var(--color-text-white);
+  transform: translateY(-1px);
 }
-/* ==========================================================================
-   NAVIGATION
-   ========================================================================== */
 
+.btn:active,
+.btn-primary:active,
+.btn-secondary:active,
+.nav-links a:active,
+.nav-quiz:active {
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   4. NAVIGATION BAR
+   ========================================================================== */
 .navbar {
   background: var(--color-bg-card);
   border-bottom: 1px solid var(--color-accent-pink);
@@ -182,7 +139,6 @@ strong, b {
   font-size: 1.4rem;
   font-weight: 800;
   margin-right: auto;
-  text-decoration: none;
 }
 
 .nav-links {
@@ -192,30 +148,89 @@ strong, b {
   list-style: none;
 }
 
-.nav-links a {
-  display: inline-block;
-  background-color: var(--color-primary);
-  color: var(--color-text-white, #ffffff);
-  padding: 10px 18px;
-  border-radius: var(--radius-sm, 10px);
-  font-weight: 600;
-  font-size: 0.95rem;
-  text-decoration: none;
-  transition: background-color 0.2s ease, transform 0.1s ease;
-}
-
-.nav-links a:hover {
-  background-color: var(--color-primary-dark, #821334);
-  color: var(--color-text-white, #ffffff);
-  transform: translateY(-1px);
-}
-
-.nav-links a:active {
-  transform: translateY(0);
-}
 /* ==========================================================================
-   HERO
+   5. CARDS, BANNERS, & BADGES
    ========================================================================== */
+.section-banner {
+  background-color: var(--color-accent-pink);
+  color: var(--color-primary);
+  border-radius: var(--radius-md);
+  padding: 16px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 36px 0 24px 0;
+}
+
+.section-banner h2 {
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 1.5rem;
+}
+
+.badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--color-accent-badge);
+  color: var(--color-primary);
+  padding: 6px 20px;
+  border-radius: var(--radius-pill);
+  font-weight: 700;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.card-light {
+  background-color: var(--color-bg-card);
+  border: 2px solid var(--color-accent-pink);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  box-shadow: var(--shadow-subtle);
+}
+
+.card-crimson {
+  background-color: var(--color-primary);
+  color: var(--color-text-white);
+  border-radius: var(--radius-md);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: var(--shadow-card);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-crimson:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(163, 28, 68, 0.28);
+}
+
+.card-crimson h3,
+.card-crimson strong {
+  color: var(--color-text-white);
+}
+
+.card-crimson p {
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   6. LAYOUT & SECTIONS
+   ========================================================================== */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
 
 .hero {
   padding: 100px 0;
@@ -242,11 +257,6 @@ strong, b {
   margin-top: 32px;
 }
 
-
-/* ==========================================================================
-   SECTIONS
-   ========================================================================== */
-
 .section {
   padding: 64px 0;
 }
@@ -255,11 +265,9 @@ strong, b {
   margin-bottom: 16px;
 }
 
-
 /* ==========================================================================
-   FOOTER
+   7. FOOTER
    ========================================================================== */
-
 footer {
   margin-top: 40px;
   padding: 40px 0;
@@ -270,47 +278,4 @@ footer {
 
 footer p {
   font-size: 0.9rem;
-}
-/* ==========================================================================
-   GLOBAL BUTTON STYLES (NAVBAR & HERO/SECTION BUTTONS)
-   ========================================================================== */
-
-/* Target all button classes and link instances */
-.btn,
-.btn-primary,
-.btn-secondary,
-.nav-links a,
-.nav-quiz {
-  display: inline-flex !important;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--color-primary, #800020) !important; /* Maroon */
-  color: #ffffff !important;                                  /* White text */
-  padding: 10px 20px !important;
-  border-radius: 10px !important;                             /* Rounded corners */
-  text-decoration: none !important;                           /* Removes blue underline */
-  font-weight: 600 !important;
-  font-size: 0.95rem !important;
-  border: none !important;
-  cursor: pointer;
-  transition: background-color 0.2s ease, transform 0.1s ease;
-}
-
-/* Hover and Active states for all buttons */
-.btn:hover,
-.btn-primary:hover,
-.btn-secondary:hover,
-.nav-links a:hover,
-.nav-quiz:hover {
-  background-color: var(--color-primary-dark, #600018) !important; /* Darker maroon */
-  color: #ffffff !important;
-  transform: translateY(-1px);
-}
-
-.btn:active,
-.btn-primary:active,
-.btn-secondary:active,
-.nav-links a:active,
-.nav-quiz:active {
-  transform: translateY(0);
 }
