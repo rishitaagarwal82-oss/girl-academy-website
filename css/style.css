@@ -182,26 +182,37 @@ strong, b {
   font-size: 1.4rem;
   font-weight: 800;
   margin-right: auto;
+  text-decoration: none;
 }
 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 12px;
+  list-style: none;
 }
 
 .nav-links a {
-  color: var(--color-text-main);
+  display: inline-block;
+  background-color: var(--color-primary);
+  color: var(--color-text-white, #ffffff);
+  padding: 10px 18px;
+  border-radius: var(--radius-sm, 10px);
   font-weight: 600;
   font-size: 0.95rem;
-  transition: color 0.2s ease;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
 .nav-links a:hover {
-  color: var(--color-primary);
+  background-color: var(--color-primary-dark, #821334);
+  color: var(--color-text-white, #ffffff);
+  transform: translateY(-1px);
 }
 
-
+.nav-links a:active {
+  transform: translateY(0);
+}
 /* ==========================================================================
    HERO
    ========================================================================== */
