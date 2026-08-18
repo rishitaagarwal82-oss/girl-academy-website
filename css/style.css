@@ -1,0 +1,262 @@
+/* ==========================================================================
+   1. DESIGN SYSTEM VARIABLES
+   ========================================================================== */
+:root {
+  /* Brand Palette */
+  --color-primary: #A31C44;          /* Deep Crimson / Maroon */
+  --color-primary-dark: #821334;     /* Darker Crimson for Hovers */
+  --color-accent-pink: #FDF0F3;      /* Very Light Pink Backgrounds */
+  --color-accent-badge: #FAD6DF;     /* Soft Pill Badge Background */
+  
+  /* Text & Neutral Colors */
+  --color-text-main: #3B3B3B;        /* Body Dark Charcoal */
+  --color-text-muted: #666666;       /* Subtitle / Muted Grey */
+  --color-text-white: #FFFFFF;       /* Pure White Text */
+  --color-bg-page: #FAFAFA;          /* Light Off-White Background */
+  --color-bg-card: #FFFFFF;          /* Pure White Card Background */
+
+  /* Typography */
+  --font-family-base: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-family-heading: 'Outfit', 'Inter', system-ui, sans-serif;
+
+  /* Spacing & Borders */
+  --container-width: 1140px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-pill: 50px;
+
+  /* Elevation */
+  --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.04);
+  --shadow-card: 0 8px 24px rgba(163, 28, 68, 0.18);
+}
+
+/* ==========================================================================
+   2. RESET & GLOBAL STYLES
+   ========================================================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family-base);
+  background-color: var(--color-bg-page);
+  color: var(--color-text-main);
+  line-height: 1.6;
+  font-size: 1rem;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Headings */
+h1, h2, h3, h4 {
+  font-family: var(--font-family-heading);
+  color: var(--color-primary);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+strong, b {
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   3. SHARED COMPONENTS (BADGES, BANNERS, & CARDS)
+   ========================================================================== */
+/* Section Header Banner (e.g., THE ACADEMY) */
+.section-banner {
+  background-color: var(--color-accent-pink);
+  color: var(--color-primary);
+  border-radius: var(--radius-md);
+  padding: 16px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 36px 0 24px 0;
+}
+
+.section-banner h2 {
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 1.5rem;
+}
+
+/* Pill Badges (e.g., MISSION, VISION) */
+.badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--color-accent-badge);
+  color: var(--color-primary);
+  padding: 6px 20px;
+  border-radius: var(--radius-pill);
+  font-weight: 700;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Grid Layouts */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* Light Card Container */
+.card-light {
+  background-color: var(--color-bg-card);
+  border: 2px solid var(--color-accent-pink);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  box-shadow: var(--shadow-subtle);
+}
+
+/* Deep Crimson Card (Learn, Discover, Act) */
+.card-crimson {
+  background-color: var(--color-primary);
+  color: var(--color-text-white);
+  border-radius: var(--radius-md);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: var(--shadow-card);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-crimson:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(163, 28, 68, 0.28);
+}
+
+.card-crimson h3 {
+  color: var(--color-text-white);
+  font-size: 1.35rem;
+}
+
+.card-crimson p {
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 0.95rem;
+}
+
+.card-crimson strong {
+  color: var(--color-text-white);
+}
+/* ==========================================================================
+   NAVIGATION
+   ========================================================================== */
+
+.navbar {
+  background: var(--color-bg-card);
+  border-bottom: 1px solid var(--color-accent-pink);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-container {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.logo {
+  color: var(--color-primary);
+  font-family: var(--font-family-heading);
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin-right: auto;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.nav-links a {
+  color: var(--color-text-main);
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: var(--color-primary);
+}
+
+
+/* ==========================================================================
+   HERO
+   ========================================================================== */
+
+.hero {
+  padding: 100px 0;
+  text-align: center;
+  background: var(--color-accent-pink);
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  margin: 20px 0;
+}
+
+.hero p {
+  max-width: 650px;
+  margin: 0 auto;
+  color: var(--color-text-muted);
+  font-size: 1.15rem;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 32px;
+}
+
+
+/* ==========================================================================
+   SECTIONS
+   ========================================================================== */
+
+.section {
+  padding: 64px 0;
+}
+
+.section h2 {
+  margin-bottom: 16px;
+}
+
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+
+footer {
+  margin-top: 40px;
+  padding: 40px 0;
+  background: var(--color-primary);
+  color: var(--color-text-white);
+  text-align: center;
+}
+
+footer p {
+  font-size: 0.9rem;
+}

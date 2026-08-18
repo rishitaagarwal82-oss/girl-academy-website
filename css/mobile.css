@@ -1,0 +1,88 @@
+/* ==========================================================================
+   RESPONSIVE MEDIA QUERIES
+   ========================================================================== */
+
+/* Tablets & Small Laptops (Max Width: 992px) */
+@media (max-width: 992px) {
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+/* Mobile Devices (Max Width: 768px) */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  /* Force all multi-column grids to single column */
+  .grid-2, 
+  .grid-3 {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .section-banner {
+    padding: 12px 20px;
+    margin: 24px 0 16px 0;
+  }
+
+  .section-banner h2 {
+    font-size: 1.25rem;
+  }
+
+  .card-light {
+    padding: 20px;
+  }
+
+  .card-crimson {
+    padding: 20px;
+  }
+}
+
+/* Very Small Mobile Screens (Max Width: 480px) */
+@media (max-width: 480px) {
+  .badge-pill {
+    padding: 4px 12px;
+    font-size: 0.8rem;
+  }
+
+  .section-banner h2 {
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 768px) {
+
+  .navbar-container {
+    flex-wrap: wrap;
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+
+  .nav-links {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px 18px;
+  }
+
+  .nav-quiz {
+    display: none;
+  }
+
+  .hero {
+    padding: 70px 0;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+  }
+
+}
