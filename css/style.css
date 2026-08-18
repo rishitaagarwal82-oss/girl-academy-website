@@ -271,3 +271,46 @@ footer {
 footer p {
   font-size: 0.9rem;
 }
+/* ==========================================================================
+   GLOBAL BUTTON STYLES (NAVBAR & HERO/SECTION BUTTONS)
+   ========================================================================== */
+
+/* Target all button classes and link instances */
+.btn,
+.btn-primary,
+.btn-secondary,
+.nav-links a,
+.nav-quiz {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-primary, #800020) !important; /* Maroon */
+  color: #ffffff !important;                                  /* White text */
+  padding: 10px 20px !important;
+  border-radius: 10px !important;                             /* Rounded corners */
+  text-decoration: none !important;                           /* Removes blue underline */
+  font-weight: 600 !important;
+  font-size: 0.95rem !important;
+  border: none !important;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+/* Hover and Active states for all buttons */
+.btn:hover,
+.btn-primary:hover,
+.btn-secondary:hover,
+.nav-links a:hover,
+.nav-quiz:hover {
+  background-color: var(--color-primary-dark, #600018) !important; /* Darker maroon */
+  color: #ffffff !important;
+  transform: translateY(-1px);
+}
+
+.btn:active,
+.btn-primary:active,
+.btn-secondary:active,
+.nav-links a:active,
+.nav-quiz:active {
+  transform: translateY(0);
+}
