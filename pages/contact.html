@@ -1,187 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Contact | Girl Academy</title>
+    <title>Contact | GIRL Academy</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap"
-    rel="stylesheet"
-  >
-
-  <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="../pages.css">
-  <link rel="stylesheet" href="../mobile.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="../css/mobile.css">
 </head>
 
 <body>
 
-  <!-- Navigation -->
-  <header class="navbar">
-    <div class="container navbar-container">
+    <header>
+        <nav class="navbar">
+            <div class="container navbar-container">
 
-      <a href="../index.html" class="logo">
-        Girl Academy
-      </a>
-
-      <nav>
-        <ul class="nav-links">
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="observatory.html">Observatory</a></li>
-          <li><a href="opportunities.html">Opportunities</a></li>
-          <li><a href="team.html">Team</a></li>
-          <li><a href="get-involved.html">Get Involved</a></li>
-          <li><a href="contact.html" aria-current="page">Contact</a></li>
-        </ul>
-      </nav>
-
-    </div>
-  </header>
-
-
-  <!-- Hero -->
-  <section class="hero">
-    <div class="container">
-
-      <span class="badge-pill">Get in touch</span>
-
-      <h1>Contact Us</h1>
-
-      <p>
-        Have a question, idea, opportunity, or want to get involved?
-        We'd love to hear from you.
-      </p>
-
-    </div>
-  </section>
-
-
-  <!-- Contact Content -->
-  <main>
-
-    <section class="section">
-      <div class="container">
-
-        <div class="section-banner">
-          <h2>Let's Connect</h2>
-        </div>
-
-        <div class="grid-2">
-
-          <!-- Contact Information -->
-          <div class="card-light">
-
-            <h2>Reach Out</h2>
-
-            <p>
-              Whether you're interested in collaborating, have a question
-              about Girl Academy, or simply want to connect, you can reach
-              us through the information below.
-            </p>
-
-            <div class="contact-info-list">
-
-              <div class="contact-card">
-                <h4>Email</h4>
-                <a href="mailto:hello@girlacademy.org">
-                  hello@girlacademy.org
+                <a href="../index.html" class="logo">
+                    GIRL Academy
                 </a>
-              </div>
 
-              <div class="contact-card">
-                <h4>Follow Us</h4>
-
-                <div class="social-links">
-                  <a href="#" aria-label="Instagram">Instagram</a>
-                  <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                <div class="nav-links">
+                    <a href="about.html">About</a>
+                    <a href="get-involved.html">Get Involved</a>
+                    <a href="observatory.html">Observatory</a>
+                    <a href="team.html">Team</a>
+                    <a href="contact.html">Contact</a>
                 </div>
-              </div>
 
-              <div class="contact-card">
-                <h4>Collaboration</h4>
-                <p>
-                  Interested in partnering with Girl Academy?
-                  Send us a message and tell us how we can work together.
-                </p>
-              </div>
+                <a href="get-involved.html" class="btn btn-primary nav-quiz">
+                    Find Your Path
+                </a>
 
             </div>
+        </nav>
+    </header>
 
-          </div>
+
+    <main>
+
+        <!-- Page Hero -->
+        <section class="hero">
+            <div class="container">
+
+                <span class="badge-pill">GIRL Academy</span>
+
+                <h1>
+                    Let's Connect.
+                </h1>
+
+                <p>
+                    Have a question, an idea, or want to help build
+                    a future where girls and women are better represented
+                    in health, research, and innovation?
+                </p>
+
+            </div>
+        </section>
 
 
-          <!-- Contact Form -->
-          <div class="card-light">
+        <!-- Contact -->
+        <section class="section">
+            <div class="container">
 
-            <h2>Send a Message</h2>
+                <div class="section-banner">
+                    <h2>Get in Touch</h2>
+                </div>
 
-            <form id="contact-form" class="contact-form">
+                <div class="grid-2">
 
-              <div class="form-group">
-                <label for="name">Name</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  placeholder="Your name"
-                  required
-                >
-              </div>
+                    <!-- Left: Form -->
+                    <div class="card-light">
 
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="you@example.com"
-                  required
-                >
-              </div>
+                        <h2>Send Us a Message</h2>
 
-              <div class="form-group">
-                <label for="message">Message</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows="6"
-                  placeholder="Tell us what's on your mind..."
-                  required
-                ></textarea>
-              </div>
+                        <p style="margin-bottom: 24px;">
+                            Whether you want to collaborate, ask a question,
+                            share an opportunity, or simply introduce yourself,
+                            we'd love to hear from you.
+                        </p>
 
-              <button type="submit" class="btn-submit">
-                Send Message
-              </button>
+                        <form class="contact-form" action="#" method="POST">
 
-            </form>
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    placeholder="Jane Doe"
+                                    required
+                                >
+                            </div>
 
-          </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="jane@example.com"
+                                    required
+                                >
+                            </div>
 
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input
+                                    type="text"
+                                    id="subject"
+                                    name="subject"
+                                    placeholder="How can we help?"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    rows="6"
+                                    placeholder="Write your message here..."
+                                    required
+                                ></textarea>
+                            </div>
+
+                            <button
+                                type="submit"
+                                class="btn btn-primary"
+                            >
+                                Send Message
+                            </button>
+
+                        </form>
+
+                    </div>
+
+
+                    <!-- Right: Information -->
+                    <div class="contact-info-list">
+
+                        <div class="card-crimson">
+
+                            <span class="badge-pill">
+                                Connect
+                            </span>
+
+                            <h3>
+                                Your ideas matter.
+                            </h3>
+
+                            <p>
+                                GIRL Academy is built around young people
+                                who want to learn, lead, and create change.
+                                If you have an idea or opportunity that aligns
+                                with our mission, reach out.
+                            </p>
+
+                        </div>
+
+
+                        <div class="card-light contact-card">
+
+                            <h4>Email Us</h4>
+
+                            <p>
+                                <a href="mailto:girlacademy26@gmail.com">
+                                    girlacademy26@gmail.com
+                                </a>
+                            </p>
+
+                        </div>
+
+
+                        <div class="card-light contact-card">
+
+                            <h4>Where We Work</h4>
+
+                            <p>
+                                Global Remote Organization
+                            </p>
+
+                        </div>
+
+
+                        <div class="card-light contact-card">
+
+                            <h4>Follow Our Journey</h4>
+
+                            <div class="social-links">
+
+                                <a href="#" target="_blank" rel="noopener">
+                                    Instagram
+                                </a>
+
+                                <a href="#" target="_blank" rel="noopener">
+                                    LinkedIn
+                                </a>
+
+                                <a href="#" target="_blank" rel="noopener">
+                                    Twitter / X
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- Bottom CTA -->
+        <section class="section">
+            <div class="container">
+
+                <div class="card-crimson" style="text-align: center; align-items: center;">
+
+                    <h2 style="color: white;">
+                        Want to do more?
+                    </h2>
+
+                    <p>
+                        Explore ways to contribute your time, skills,
+                        or ideas to GIRL Academy.
+                    </p>
+
+                    <a
+                        href="get-involved.html"
+                        class="btn btn-secondary"
+                        style="margin-top: 8px;"
+                    >
+                        Get Involved
+                    </a>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer>
+        <div class="container">
+            <p>
+                © 2026 GIRL Academy. All rights reserved.
+            </p>
         </div>
-
-      </div>
-    </section>
-
-  </main>
-
-
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p>&copy; 2026 Girl Academy. All rights reserved.</p>
-    </div>
-  </footer>
-
-
-  <script src="../js/navigation.js"></script>
-  <script src="../js/contact.js"></script>
+    </footer>
 
 </body>
 </html>
