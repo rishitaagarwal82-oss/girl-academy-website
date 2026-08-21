@@ -279,3 +279,82 @@ footer {
 footer p {
   font-size: 0.9rem;
 }
+/* ==========================================================================
+   CONTACT SECTION STYLES
+   ========================================================================== */
+.contact-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-card h4 {
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+}
+
+.contact-card a {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.contact-card a:hover {
+  text-decoration: underline;
+}
+
+.social-links {
+  display: flex;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.social-links a {
+  color: var(--color-primary);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* Contact Form Styles */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--color-text-main);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid var(--color-accent-badge);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-family-base);
+  font-size: 0.95rem;
+  color: var(--color-text-main);
+  background-color: var(--color-bg-page);
+  transition: border-color 0.2s ease, outline 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  background-color: var(--color-bg-card);
+}
+
+.contact-form .btn {
+  align-self: flex-start;
+  margin-top: 8px;
+}
